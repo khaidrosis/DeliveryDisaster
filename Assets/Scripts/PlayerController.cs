@@ -29,9 +29,9 @@ public class PlayerController : MonoBehaviour
 
 
 
-    void Update()
+   void Update()
     {
-        if (gameManager == null || !gameManager.isPlaying)
+        if (!gameManager.isPlaying)
         {
             moveInput = Vector2.zero;
             return;
@@ -40,16 +40,16 @@ public class PlayerController : MonoBehaviour
         float horizontal = 0f;
         float vertical = 0f;
 
-        if (Keyboard.current?.aKey?.isPressed ?? false)
+        if (Keyboard.current.aKey.isPressed)
             horizontal = -1f;
 
-        if (Keyboard.current?.dKey?.isPressed ?? false)
+        if (Keyboard.current.dKey.isPressed)
             horizontal = 1f;
 
-        if (Keyboard.current?.sKey?.isPressed ?? false)
+        if (Keyboard.current.sKey.isPressed)
             vertical = -1f;
 
-        if (Keyboard.current?.wKey?.isPressed ?? false)
+        if (Keyboard.current.wKey.isPressed)
             vertical = 1f;
 
         moveInput =
@@ -57,23 +57,9 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
     void FixedUpdate()
     {
-        if (gameManager == null || !gameManager.isPlaying)
-            return;
-
-        if (rb == null)
-            return;
-
-        Vector3 movement =
-             new Vector3(
-                 moveInput.x,
-                 0f,
-                 moveInput.y
-             );
-
-        movement = movement.normalized;
+        Vector3 movement = (transform.right * moveInput.x + transform.forward * moveInput.y).normalized;
 
         rb.MovePosition(
              rb.position +
