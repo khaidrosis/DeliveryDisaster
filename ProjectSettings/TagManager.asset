@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - DeliveryObject
+  - DropZone
   layers:
   - Default
   - TransparentFX

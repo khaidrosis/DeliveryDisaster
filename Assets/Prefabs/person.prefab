@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 7946124111372670676}
   - component: {fileID: 4833121834223433662}
   - component: {fileID: 3380393026858008611}
+  - component: {fileID: 7403398042768438266}
   m_Layer: 0
   m_Name: person
   m_TagString: Untagged
@@ -301,3 +302,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!136 &7403398042768438266
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330085891328877896}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2.75
+  m_Direction: 1
+  m_Center: {x: 0.41, y: 0.62, z: 3.41}
