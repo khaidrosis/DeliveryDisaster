@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e537ca87b97c573498e8c5326d2e4214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ForceBumper
-  launchForce: 20
+  launchForce: 25
 --- !u!54 &3380393026858008611
 Rigidbody:
   m_ObjectHideFlags: 0
