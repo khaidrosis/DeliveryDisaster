@@ -430,7 +430,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaneHazard
   gameManager: {fileID: 1410400877}
-  delivery: {fileID: 2094863521}
 --- !u!64 &174829528
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -707,7 +706,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaneHazard
   gameManager: {fileID: 1410400877}
-  delivery: {fileID: 2094863521}
 --- !u!64 &255089789
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1334,11 +1332,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 763033546}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &576618234 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6360359758381438414, guid: 496fd76ed97ccc447953d862ee1ddf29, type: 3}
-  m_PrefabInstance: {fileID: 812851170}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &628831850
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,7 +1587,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaneHazard
   gameManager: {fileID: 1410400877}
-  delivery: {fileID: 2094863521}
 --- !u!64 &811545573
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2028,7 +2020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GoalZone
   gameManager: {fileID: 1410400877}
-  snapPoint1: {fileID: 576618234}
+  snapPoints: []
 --- !u!1 &994753885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2577,7 +2569,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaneHazard
   gameManager: {fileID: 1410400877}
-  delivery: {fileID: 2094863521}
 --- !u!64 &1305545554
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2705,7 +2696,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaneHazard
   gameManager: {fileID: 1410400877}
-  delivery: {fileID: 2094863521}
 --- !u!64 &1336262210
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2883,7 +2873,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaneHazard
   gameManager: {fileID: 1410400877}
-  delivery: {fileID: 2094863521}
 --- !u!64 &1420576997
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3116,7 +3105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaneHazard
   gameManager: {fileID: 1410400877}
-  delivery: {fileID: 2094863521}
 --- !u!64 &1592966472
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3244,7 +3232,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaneHazard
   gameManager: {fileID: 1410400877}
-  delivery: {fileID: 2094863521}
 --- !u!64 &1621841084
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3562,7 +3549,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaneHazard
   gameManager: {fileID: 1410400877}
-  delivery: {fileID: 2094863521}
 --- !u!64 &1775002381
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3657,6 +3643,118 @@ Transform:
   m_Children: []
   m_Father: {fileID: 683040621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1797178753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1797178757}
+  - component: {fileID: 1797178756}
+  - component: {fileID: 1797178755}
+  - component: {fileID: 1797178754}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!135 &1797178754
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797178753}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1797178755
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797178753}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2aa76d2279d5d5e41b3ab5eb1debaed7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1797178756
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797178753}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1797178757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797178753}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.599, y: 1.16691, z: -5.393}
+  m_LocalScale: {x: 1, y: -0.14, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1804254631
 GameObject:
   m_ObjectHideFlags: 0
@@ -3690,7 +3788,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaneHazard
   gameManager: {fileID: 1410400877}
-  delivery: {fileID: 2094863521}
 --- !u!64 &1804254633
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4132,7 +4229,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaneHazard
   gameManager: {fileID: 1410400877}
-  delivery: {fileID: 2094863521}
 --- !u!64 &2072815963
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4496,3 +4592,4 @@ SceneRoots:
   - {fileID: 1410400878}
   - {fileID: 2055145272}
   - {fileID: 994753888}
+  - {fileID: 1797178757}
