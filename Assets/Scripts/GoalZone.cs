@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.XR;
 
 public class GoalZone : MonoBehaviour
 {
     public GameManager gameManager;
+    public GameObject snapPoint1;
 
     void OnTriggerEnter(Collider other)
     {
@@ -19,6 +21,7 @@ public class GoalZone : MonoBehaviour
             {
                 delivery.ResetDelivery();
             }
+
         }
     }
 }
