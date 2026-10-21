@@ -6,20 +6,17 @@ public class HazardZone : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("DeliveryObject"))
+        if (!other.CompareTag("DeliveryObject")) return;
+
+        DeliveryObject delivery = other.GetComponentInParent<DeliveryObject>();
+        if (delivery == null) return;
+
+        Debug.Log("Delivery Failed!");
+        gameManager.LoseAttempt();
+
+        if (gameManager.isPlaying)
         {
-            Debug.Log("Delivery Failed!");
-
-            gameManager.LoseAttempt();
-
-            DeliveryObject delivery =
-                 other.GetComponent<DeliveryObject>();
-
-            if (delivery != null &&
-                 gameManager.isPlaying)
-            {
-                delivery.ResetDelivery();
-            }
+            delivery.ResetDelivery();
         }
     }
 }

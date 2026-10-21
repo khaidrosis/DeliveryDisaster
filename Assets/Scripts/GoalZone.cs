@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.XR;
 
 public class GoalZone : MonoBehaviour
 {
@@ -8,20 +7,14 @@ public class GoalZone : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("DeliveryObject"))
-        {
-            Debug.Log("Successful Delivery!");
+        if (!other.CompareTag("DeliveryObject")) return;
 
-            gameManager.AddScore();
+        // Find the DeliveryObject even if the collider is on a child mesh
+        DeliveryObject delivery = other.GetComponentInParent<DeliveryObject>();
+        if (delivery == null || !delivery.IsHeld) return;   // only count a carried burger, once
 
-            DeliveryObject delivery =
-                 other.GetComponent<DeliveryObject>();
-
-            if (delivery != null)
-            {
-                delivery.ResetDelivery();
-            }
-
-        }
+        Debug.Log("Successful Delivery!");
+        gameManager.AddScore();
+        delivery.ResetDelivery();   // sets IsHeld = false, so re-entry can't double count
     }
 }
