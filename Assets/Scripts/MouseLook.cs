@@ -15,6 +15,9 @@ public class MouseLook : MonoBehaviour
 
     void Update()
     {
+        // Cursor is freed on the win/lose screen, so stop turning the camera
+        if (Cursor.lockState != CursorLockMode.Locked) return;
+
         Vector2 delta = Mouse.current.delta.ReadValue() * mouseSensitivity;
 
         xRotation -= delta.y;
